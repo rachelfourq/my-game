@@ -1,0 +1,32 @@
+body {
+	text-align: center;
+	margin-top: 200px;
+}
+
+.player1 {
+	float:left;
+}
+
+.player2 {
+	float:right;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	text-align: center;
+	display: inline;
+	cursor: move;
+}
+
+.myclass {
+	font-size: 30px;
+	padding: 10px;
+}
+
+button {
+	margin-top: 30px;
+	position: absolute;
+}
