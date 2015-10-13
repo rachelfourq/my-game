@@ -1,6 +1,8 @@
 body {
 	text-align: center;
 	margin-top: 200px;
+	background-image: url("http://www.pptbackgrounds.net/uploads/elegant-grey-illumination-background-presentations-powerpoint-backgrounds.jpg");
+	background-size: cover;
 }
 
 .player1 {
@@ -30,3 +32,17 @@ button {
 	margin-top: 30px;
 	position: absolute;
 }
+
+.dropdown-menu {
+	padding: 20px;
+	margin-left: 50px;
+}
+
+.pickPlayer {
+	display: none;
+}
+
+.gameboard {
+	display: none;
+}
+

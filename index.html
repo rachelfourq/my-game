@@ -24,17 +24,42 @@
 
 <body>
 <container class="pageOne">
+<h1 id="display">UNSCRAMBLE</h1>
+
+<div class="btn-group">
+
+
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="How to play info....">
+  HOW TO PLAY
+</button>
+
+
+<!--   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    HOW TO PLAY <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <p>A word will automatically be generated for you...but in the wrong order. You're task is to drag and drop the letters into the right order.</p> <p>Click the "Let's Play" button to select One Player or Two Player.</p> <p>Use the reset button to start the game over</p>
+  </ul> -->
+</div> 
+<div class="btn-group" id="play" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">LET'S PLAY</button>
+</div>     
 </container>
 
 <!-- need to write a function for one player or two -->
 <container class="pickPlayer">
+<button>1 Player</button>
+<br></br>
+<button>2 Player</button>
 </container>
 
 
 <container class="gameboard">
 
-
-
+<div class="whichTurn">
+    <h1></h1>
+</div>
 <div class="player1">Player 1
 <p class="score1"></p>
 </div>
@@ -48,9 +73,6 @@
     <!-- where scrambled letters will appear --></p>
 </div>
 <div>
-<button id='newgame'type="submit" class="btn btn-primary">new game</button>
-<br/>
-<br/>
 <button class="reset">reset</button>
 </div>
 </container>
@@ -70,6 +92,7 @@
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.css">
   
     <script type="text/javascript" src="timer.js"></script>
+  
     <script src="script.js"></script>
   </body>
 </html>
