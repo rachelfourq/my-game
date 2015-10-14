@@ -7,7 +7,7 @@ body {
 }
 
 .displayTimer {
-	font-size: 40px;
+	font-size: 30px;
 	color: white;
 }
 
@@ -15,12 +15,22 @@ h1 {
 	color: white;
 }
 
+h3 {
+	color: white;
+	font-size: 17px;
+	padding: none;
+}
+
 .player1 {
 	float:left;
+	color: white;
+	padding-left: 40px;
 }
 
 .player2 {
 	float:right;
+	padding-right: 40px;
+	color:white;
 }
 
 ul {
@@ -33,13 +43,6 @@ li {
 	cursor: move;
 }
 
-.player1 {
-	color: white;
-}
-
-.player2 {
-	color: white;
-}
 
 #sortable {
 	padding: none;
@@ -52,13 +55,7 @@ li {
 
 button {
 	margin-top: 30px;
-	position: absolute;
-}
-
-ul.dropdown-menu {
-	width: 400px;
-	padding: 20px;
-	margin-left: 50px;
+/*	position: absolute;*/
 }
 
 .pickPlayer {
@@ -83,7 +80,17 @@ button.confirm {
 .turn {
 	margin-top: 20px !important;
 	height: 20px;
+}
 
+#topRow {
+	margin-top: -150px;
+	padding-top: 20px;
+	font-size: .5em;
+	color: white;
+}
+
+#timer {
+	height: 100px;
 }
 
 

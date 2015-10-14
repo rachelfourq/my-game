@@ -5,7 +5,16 @@ var words = ["help", "peer", "spell", "level", "hear", "game", "space", "index",
 
 var checkWinner = false;
 
+$('.tooltipped').tooltip({delay: 50});
 
+  $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+    }
+  );
+    
 
 
 // var randomWord = words[Math.floor(Math.random()*words.length)];
@@ -40,7 +49,7 @@ var count = 6;
 
 //divs to show and hide
 $('#play').click(function() {
-	// console.log("Called2")
+	console.log("Called2")
 	$('.gameboard').show();
 	$('.pageOne').hide();
 });
@@ -49,8 +58,8 @@ $('#play').click(function() {
 
 
 $('.startGame').on("click", function() {
+	$('.startGame').hide();
 	newWord();
-	console.log("test button")
 	var tryThis = setInterval(myFunc, 1000)
 	newFunction();	
 });
@@ -160,10 +169,10 @@ var duration = function () {
 	console.log("interval trigger")
 	if (currentPlayer === "playerOne") {
 		currentPlayer = "playerTwo";
-		$('.whichTurn h1').text("Player Two");
+		$('.whichTurn h4').text("Player Two");
 	} else if (currentPlayer === "playerTwo") {
 		currentPlayer = "playerOne";
-		$('.whichTurn h1').text('Player One');
+		$('.whichTurn h4').text('Player One');
 	}
 	var removeArr = $('#sortable li')
 	for (var i = 0; i < removeArr.length; i++) {

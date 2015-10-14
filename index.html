@@ -8,13 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Unscramble Game</title>
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+ 
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
     <!-- Linked to CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -30,62 +32,80 @@
 
 <body>
 <container class="pageOne">
-<h1>UNSCRAMBLE</h1>
+  <h1>UNSCRAMBLE</h1>
+  <h3>Providing you with improperly ordered words since 2015</h3>
 
+  <div class="row">
 
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    HOW TO PLAY <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-  <p>This is a TWO Player game, in which a word will automatically be generated for you...only it will be in the WRONG order. Your task is to drag and drop the letters into the correct order. You will have 6 seconds to solve. If you solve, you get another turn! If not, the turn will move to the next player</p> <p>Click the "Let's Play" button to begin.</p> 
-  </ul>
-</div> 
-<div class="btn-group" id="play" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">LET'S PLAY</button>
-</div>     
+    <div class="col s6 btn-group">
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">How to Play</a>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>How To Play</h4>
+          <p>This is a TWO Player game, in which a word will automatically be generated for you...only it will be in the WRONG order. Your task is to drag and drop the letters into the correct order. You will have 6 seconds to solve. If you solve, you get another turn! If not, the turn will move to the next player</p> <p>Click the "Let's Play" button to begin.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it!</a>
+        </div>
+      </div>
+    </div>  
+
+    <div class="col s6 btn-group" role="group" aria-label="...">
+      <a id="play" class="waves-effect waves-light btn">Let's Play</a>
+    </div>     
+
+  </div>
+
 </container>
-
-<!-- need to write a function for one player or two -->
-<container class="pickPlayer">
-<button>1 Player</button>
-<br></br>
-<button>2 Player</button>
-</container>
-
 
 <container class="gameboard">
 
-<div class="displayTimer"></div>
-<div class="whichTurn">
-    <h1 class="turn">Player One</h1>
-</div>
-<div class="player1">Player 1
-<p class="score1"></p>
-</div>
-<div class="player2">Player 2
-<p class="score2"></p>
-</div>
+  <row class="row" >
+   <div class="whichTurn" id="topRow">
+      <h4 class="turn">Player One</h4>
+    </div>
+    <div id="timer" class="displayTimer"></div>
+  </row>
 
-<div class="container">
-    <p id="p">
-    <ul id="sortable"></ul>
-    <!-- where scrambled letters will appear --></p>
-</div>
-<div>
-<button class="startGame">Start Game</button>
-</div>
+  <row class="row">
+    <div class="col s4">
+      <div class="player1">Player 1
+      <p class="score1"></p>
+    </div>
+    </div>
+    <div class="col s4">
+      <div class="container">
+      <ul id="sortable"></ul>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="player2">Player 2
+      <p class="score2"></p>
+      </div>
+    </div>
+  </row>
+
+
+
+  <div>
+    <button class="startGame waves-effect waves-light btn">Start Game</button>
+  </div>
+
 </container>
 
-
-
-   
+  
+    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ 
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js'></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <!--  // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--bootstrap-->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
     <!-- sweet alert -->
    <!-- <script src="dist/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="dist/sweetalert.css"> -->
    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert-dev.min.js'></script>
