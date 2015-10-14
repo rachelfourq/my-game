@@ -27,6 +27,7 @@ var checkWinner = false;
 
 // $('.btn btn-default').popover();
 
+//timer 
 var count = 6;
    var myFunc = function(){
        if (count === 1){
@@ -37,17 +38,14 @@ var count = 6;
    }
 
 
-
+//divs to show and hide
 $('#play').click(function() {
 	// console.log("Called2")
-	$('.pickPlayer').show();
+	$('.gameboard').show();
 	$('.pageOne').hide();
 });
 
-$('.pickPlayer').on("click", "button", function(){
-	$('.pickPlayer').hide();
-	$('.gameboard').show();
-})
+//   
 
 
 $('.startGame').on("click", function() {
@@ -58,16 +56,11 @@ $('.startGame').on("click", function() {
 });
 
 
+//new word every 6 seconds
 var changeWord = null;
 function newFunction (){
 	changeWord = setInterval (duration, 6000)
 };
-
-$('#btn-giveaway').click(function() {
-
-	$('.container').hide();
-	$('#giveaway_container').show();
-});
 
 
 var getWord = function(){
@@ -107,6 +100,7 @@ var rearrange = function() {
 	return playersWord;
 };
 
+//alert when word is correct
 $('#sortable').on("mousemove", (function() {
 // console.log(randomWord)
 // console.log('re',rearrange())
@@ -125,10 +119,7 @@ if (currentWord === rearrange()) {
 
 
 
-//page one: how to play | let's play
-
-//page two: one play | two player
-
+//scoring 
 var currentPlayer = "playerOne";
 var playerOneScore = 0;
 var playerTwoScore = 0;
@@ -195,11 +186,6 @@ var checkScore = function (){
 		checkWinner = true;
 	}
 }
-
-
-
-
-
 
 
 
