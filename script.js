@@ -5,7 +5,8 @@ var words = ["help", "peer", "spell", "level", "hear", "game", "space", "index",
 
 var checkWinner = false;
 
-//console.log(words);
+
+
 
 // var randomWord = words[Math.floor(Math.random()*words.length)];
 
@@ -26,54 +27,15 @@ var checkWinner = false;
 
 // $('.btn btn-default').popover();
 
- var container = $(".pageOne");
- var display; // this will be the Solari Display object
+var count = 6;
+   var myFunc = function(){
+       if (count === 1){
+           count = 7
+       }
+       count --
+       $('.displayTimer').text(count)
+   }
 
-window.requestAnimationFrame = window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame; // you'll need support for rAF
-
-window.addEventListener( 'load', function() { // once the page loads
-
-    // create a SolariDisplay
-
-    /*
-        parameters:
-        container - the element that will contain the display
-        format - an array of either a single character or an array of characters. 
-            The length of this format array is the number of segments.
-            There are several defines ready to use:
-                CTR.SOLARIVALUES.letter: A to Z and space
-                CTR.SOLARIVALUES.number: 0 to 9
-                CTR.SOLARIVALUES.hour: 00 to 23
-                CTR.SOLARIVALUES.minute: 00 to 59
-        segmentWidth: the width in pixels of a single segment
-        segmentHeight: the height in pixels of a single segment
-        fontSize: the size of the font in pixels
-    */
-
-    display = new CTR.SolariBoard( {
-        container: container,
-        format: [ 
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter,
-            CTR.SOLARIVALUES.letter
-         ],
-        segmentWidth: 70,
-        segmentHeight: 120,
-        fontSize: 100
-    } );
-
-    // update the content of the display
-    display.setContent( 'HELLO WORLD' );
-
-}, false );
 
 
 $('#play').click(function() {
@@ -82,10 +44,16 @@ $('#play').click(function() {
 	$('.pageOne').hide();
 });
 
-$('.pickPlayer').on("click", 'button', function() {
+$('.pickPlayer').on("click", "button", function(){
 	$('.pickPlayer').hide();
 	$('.gameboard').show();
-	
+})
+
+
+$('.startGame').on("click", function() {
+	newWord();
+	console.log("test button")
+	var tryThis = setInterval(myFunc, 1000)
 	newFunction();	
 });
 
@@ -156,6 +124,7 @@ if (currentWord === rearrange()) {
 }));
 
 
+
 //page one: how to play | let's play
 
 //page two: one play | two player
@@ -180,16 +149,17 @@ var score = function () {
 };
 
 
-$('.reset').click(function(e) {
-	e.preventDefault() 
+// $('.reset').click(function(e) {
+// 	e.preventDefault() 
 
-	var removeArr = $('#sortable li')
-	for (var i = 0; i < removeArr.length; i++) {
-		console.log('removing', removeArr[i])
-		removeArr[i].remove();
-	};
-	newWord();
-});
+
+// 	var removeArr = $('#sortable li')
+// 	for (var i = 0; i < removeArr.length; i++) {
+// 		console.log('removing', removeArr[i])
+// 		removeArr[i].remove();
+// 	};
+// 	newWord();
+// });
 
 //page three: game 
 

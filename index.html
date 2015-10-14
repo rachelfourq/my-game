@@ -17,8 +17,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Linked to CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- line 17 for font css -->
-    <link href="font.css">
+
+    <link href="flapper.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" href="flapper.js"></script>
+   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +41,7 @@
     HOW TO PLAY <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-  <p>A word will automatically be generated for you...but in the wrong order. You're task is to drag and drop the letters into the right order.</p> <p>Click the "Let's Play" button to select One Player or Two Player.</p> <p>Use the reset button to start the game over</p>
+  <p>A word will automatically be generated for you...but in the wrong order. Your task is to drag and drop the letters into the right order. You will have 6 seconds before the word will change or move to the next Player</p> <p>Click the "Let's Play" button to select One Player or Two Player.</p> <p>Use the reset button to start the game over</p>
   </ul>
 </div> 
 <div class="btn-group" id="play" role="group" aria-label="...">
@@ -56,8 +59,10 @@
 
 <container class="gameboard">
 
+<div class="displayTimer"></div>
+
 <div class="whichTurn">
-    <h1>Player One</h1>
+    <h1 class="turn">Player One</h1>
 </div>
 <div class="player1">Player 1
 <p class="score1"></p>
@@ -72,7 +77,7 @@
     <!-- where scrambled letters will appear --></p>
 </div>
 <div>
-<button class="reset">reset</button>
+<button class="startGame">Start Game</button>
 </div>
 </container>
 
@@ -91,10 +96,6 @@
   
   
     <script type="text/javascript" src="timer.js"></script>
-
-    <!-- line 97-98 for Solari -->
-    <script src="font.js"></script>
-    
 
     <script src="script.js"></script>
   </body>
