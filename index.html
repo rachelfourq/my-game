@@ -8,11 +8,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Unscramble Game</title>
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.css">
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Linked to CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,17 +30,36 @@
 
 <body>
 <container class="pageOne">
+<h1>UNSCRAMBLE</h1>
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    HOW TO PLAY <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <p>This is a TWO Player game, in which a word will automatically be generated for you...only it will be in the WRONG order. Your task is to drag and drop the letters into the correct order. You will have 6 seconds to solve. If you solve, you get another turn! If not, the turn will move to the next player</p> <p>Click the "Let's Play" button to begin.</p> 
+  </ul>
+</div> 
+<div class="btn-group" id="play" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">LET'S PLAY</button>
+</div>     
 </container>
 
 <!-- need to write a function for one player or two -->
 <container class="pickPlayer">
+<button>1 Player</button>
+<br></br>
+<button>2 Player</button>
 </container>
 
 
 <container class="gameboard">
 
-
-
+<div class="displayTimer"></div>
+<div class="whichTurn">
+    <h1 class="turn">Player One</h1>
+</div>
 <div class="player1">Player 1
 <p class="score1"></p>
 </div>
@@ -48,10 +73,7 @@
     <!-- where scrambled letters will appear --></p>
 </div>
 <div>
-<button id='newgame'type="submit" class="btn btn-primary">new game</button>
-<br/>
-<br/>
-<button class="reset">reset</button>
+<button class="startGame">Start Game</button>
 </div>
 </container>
 
@@ -67,9 +89,7 @@
     <!-- sweet alert -->
    <!-- <script src="dist/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="dist/sweetalert.css"> -->
    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert-dev.min.js'></script>
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.css">
-  
-    <script type="text/javascript" src="timer.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

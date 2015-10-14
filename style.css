@@ -1,6 +1,18 @@
 body {
 	text-align: center;
 	margin-top: 200px;
+	background-image: url("http://www.pptbackgrounds.net/uploads/elegant-grey-illumination-background-presentations-powerpoint-backgrounds.jpg");
+	background-size: cover;
+	font-family: 'Raleway', sans-serif;
+}
+
+.displayTimer {
+	font-size: 40px;
+	color: white;
+}
+
+h1 {
+	color: white;
 }
 
 .player1 {
@@ -21,6 +33,18 @@ li {
 	cursor: move;
 }
 
+.player1 {
+	color: white;
+}
+
+.player2 {
+	color: white;
+}
+
+#sortable {
+	padding: none;
+}
+
 .myclass {
 	font-size: 30px;
 	padding: 10px;
@@ -30,3 +54,36 @@ button {
 	margin-top: 30px;
 	position: absolute;
 }
+
+ul.dropdown-menu {
+	width: 400px;
+	padding: 20px;
+	margin-left: 50px;
+}
+
+.pickPlayer {
+	display: none;
+}
+
+.gameboard {
+	display: none;
+	font-color: white;
+}
+
+div.sweet-alert.showSweetAlert {
+	height: 400px;
+	width: 500px;
+	text-align: center;
+}
+
+button.confirm {
+	position: relative;
+}
+
+.turn {
+	margin-top: 20px !important;
+	height: 20px;
+
+}
+
+
