@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //words to be pulled at random for the game
 //add approx. 30 words
-var words = ["help", "peer", "spell", "level", "hear", "game", "space", "index", "banana", "grape", "fruit", "flint", "landed", "goats", "grudge", "helper", "wraper", "grapefruit", "suspicious", "finalist", "decision", "healer", "squash", "reaching", "modestly", "camper", "smashed", "vehicle"]
+var words = ["help", "peer", "spell", "level", "hear", "game", "space", "index", "sinks", "grape", "fruit", "flint", "landed", "goats", "grudge", "helper", "wraper", "glare", "saint", "giant", "yearn", "storm", "squash", "reach", "strike", "camper", "smashed", "gear", "flown", "filth", "cereal", "change", "vault", "school", "brown"]
 
 var checkWinner = false;
 
@@ -137,7 +137,7 @@ var duration = function () {
 var checkScore = function (){
 	console.log('hitting function')
 
-	if ((playerOneScore === 2) || (playerTwoScore === 2)){
+	if ((playerOneScore === 5) || (playerTwoScore === 5)){
 		swal("Game Over!", "Well played!")
 		clearInterval(changeWord)
 		checkWinner = true;
