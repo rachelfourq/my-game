@@ -5,47 +5,26 @@ var words = ["help", "peer", "spell", "level", "hear", "game", "space", "index",
 
 var checkWinner = false;
 
+//Materialize shiz
 $('.tooltipped').tooltip({delay: 50});
 
-  $('.modal-trigger').leanModal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      in_duration: 300, // Transition in duration
-      out_duration: 200, // Transition out duration
+$('.modal-trigger').leanModal({
+	dismissible: true, // Modal can be dismissed by clicking outside of the modal
+    opacity: .5, // Opacity of modal background
+    in_duration: 300, // Transition in duration
+    out_duration: 200, // Transition out duration
     }
   );
     
-
-
-// var randomWord = words[Math.floor(Math.random()*words.length)];
-
-//think about writing a function using pop, push and splice to 
-//take randomWord, make it an array, and then shuffle the array,
-//then push it back as a scrambled word.
-
-//GO WITH THIS ONE. alternate way that is much shorter and easier :)
-// var shuffled = randomWord.split('').sort(function(){return 0.5-Math.random()}).join('');
-
-// var splitWord = shuffled.split('');
-
-// for (var i = 0; i < splitWord.length; i++) {
-// 	var newLi = $("<li class='myclass'></li>").html(splitWord[i]);
-// 	$('#sortable').append(newLi);
-
-// };
-
-// $('.btn btn-default').popover();
-
 //timer 
-var count = 6;
+var count = 8;
    var myFunc = function(){
        if (count === 1){
-           count = 7
+           count = 9
        }
        count --
        $('.displayTimer').text(count)
    }
-
 
 //divs to show and hide
 $('#play').click(function() {
@@ -54,9 +33,6 @@ $('#play').click(function() {
 	$('.pageOne').hide();
 });
 
-//   
-
-
 $('.startGame').on("click", function() {
 	$('.startGame').hide();
 	newWord();
@@ -64,13 +40,11 @@ $('.startGame').on("click", function() {
 	newFunction();	
 });
 
-
 //new word every 6 seconds
 var changeWord = null;
 function newFunction (){
-	changeWord = setInterval (duration, 6000)
+	changeWord = setInterval (duration, 8000)
 };
-
 
 var getWord = function(){
 	return words[Math.floor(Math.random()*words.length)];
@@ -94,10 +68,6 @@ var newWord = function () {
 	return randomWord
 }
 
-
-// var randomWord = newWord();
-
-
 $('#sortable').sortable();
 
 var rearrange = function() {
@@ -114,7 +84,7 @@ $('#sortable').on("mousemove", (function() {
 // console.log(randomWord)
 // console.log('re',rearrange())
 if (currentWord === rearrange()) {
-	swal("Good job!", "You clicked the button!", "success")
+	swal("Good job!", "That's the word!", "success")
 	var newRandomWord = currentWord
 	currentWord = ''
 	score();
@@ -125,8 +95,6 @@ if (currentWord === rearrange()) {
 	}
 }
 }));
-
-
 
 //scoring 
 var currentPlayer = "playerOne";
@@ -145,25 +113,8 @@ var score = function () {
 		console.log(playerTwoScore);
 		$('.score2').text(playerTwoScore);
 	}
-
 };
 
-
-// $('.reset').click(function(e) {
-// 	e.preventDefault() 
-
-
-// 	var removeArr = $('#sortable li')
-// 	for (var i = 0; i < removeArr.length; i++) {
-// 		console.log('removing', removeArr[i])
-// 		removeArr[i].remove();
-// 	};
-// 	newWord();
-// });
-
-//page three: game 
-
-//timer function for player 1 and player 2 - MAYBE -- set .on('timerUp') to switch to other player-- is this possible?
 
 var duration = function () {
 	console.log("interval trigger")
@@ -180,22 +131,21 @@ var duration = function () {
 		removeArr[i].remove();
 	};
 	newWord();
-
 }
 
 //play to 5 function
 var checkScore = function (){
 	console.log('hitting function')
-	// console.log(playerOneScore);
-	// console.log(playerTwoScore);
 
-	if ((playerOneScore === 5) || (playerTwoScore === 5)){
-		swal('game over');
+	if ((playerOneScore === 2) || (playerTwoScore === 2)){
+		swal("Game Over!", "Well played!")
 		clearInterval(changeWord)
 		checkWinner = true;
+		$('.confirm').click(function(){
+			location.reload();
+		})
 	}
 }
-
 
 
 });

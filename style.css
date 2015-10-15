@@ -13,6 +13,7 @@ body {
 
 h1 {
 	color: white;
+	text-shadow: 2px 2px grey;
 }
 
 h3 {
@@ -24,13 +25,15 @@ h3 {
 .player1 {
 	float:left;
 	color: white;
-	padding-left: 40px;
+	padding-left: 50px;
+	font-size: 30px;
 }
 
 .player2 {
 	float:right;
-	padding-right: 40px;
+	padding-right: 50px;
 	color:white;
+	font-size: 30px;
 }
 
 ul {
@@ -43,9 +46,8 @@ li {
 	cursor: move;
 }
 
-
 #sortable {
-	padding: none;
+	padding: 5px;
 }
 
 .myclass {
@@ -92,5 +94,21 @@ button.confirm {
 #timer {
 	height: 100px;
 }
+
+.rightButton {
+	/*float: left !important;*/
+	text-align: right;
+}
+
+.leftButton {
+	/*float: right !important;*/
+	text-align: left;
+}
+
+.modal-content {
+	text-align: center;
+}
+
+
 
 
