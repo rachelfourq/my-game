@@ -7,12 +7,12 @@ This is a TWO player game that automatically switches between players using a ti
 The game ends once either player has successfully unscrambled 5 words
 
 ### Technologies Used
-*HTML
-*CSS
-*jQuery
-*JavaScript
-*Materialize 
-*SweetAlert
+* HTML
+* CSS
+* jQuery
+* JavaScript
+* Materialize 
+* SweetAlert
 
 
 ### Upcoming Additions
